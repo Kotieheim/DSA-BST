@@ -1,0 +1,58 @@
+            Binary Search Trees
+
+Trees
+ - Data structures that consist of nodes which are linked together in a certain way. Nodes in a tree have a parent-child relationship. Each node is linked to 0 or more child nodes and at most 1 parent. A Special node can be found at the top of the tree called the "root" node. root node has no parent, and Nodes without any children are called "leaf" nodes.
+
+Binary Search Trees
+ - Take the concept of binary trees 1 step further. All nodes in the left-hand branch of a node are guaranteed to have lower values than the node itself, and all of the nodes in the right-hand branch of a node are guaranteed to have a higher value than the node itself.
+
+ - BST are recursive in nature, searching and going through the tree until it gets to a null (or base case)
+
+ - Support 3 fundamental operations
+    - Insert
+        + if there is no existing tree, then the 1st item that we insert will be inserted at the root. if its an existing tree then we have to find the right place for the item we want to insert, and then insert it.
+
+    - Find/Retrieval
+        + Follows the same pattern as insertion
+
+    - Remove
+
+        + Can be tricky, after you find the item you want to remove using the find/retrieval process, there are 3 scenarios you may encounter.
+
+            - no children (a leaf node)
+                + simplest case of removal, just detach this node from the parent.
+
+            - 1 child (left or right, doesn't matter)
+                + if the item you are removing has 1 child, then you make the parent of the item you are removing point to this 1 child.
+
+            - 2 children (left and right)
+                + The trickest part of removal from a BST.
+                + must find which of the children would be a successor that will replace the removed node. To do so:
+                    - find the minimum value in the right subtree;
+                    
+                    - replace the value of the node to be removed with the found minimum - now, the right subtree contains a duplicate; and
+
+                    - apply remove to the right subtree to remove the duplicate.
+
+Key Terms
+
+ - Trees
+
+ - Child
+
+ - Parent
+
+ - Root
+
+ - Leaf
+
+ - Binary tree
+
+ - Branch
+
+ - Subtree
+
+ - Binary search tree
+
+ - Balanced tree
+    - each row in a balanced tree containes 2 times as many nodes as the row before, the width grows exponentially with the number of nodes. The height must grow logarithmically with the number of nodes O(log(n))
